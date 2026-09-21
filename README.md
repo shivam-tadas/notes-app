@@ -2,7 +2,7 @@
 
 A simple beginner-friendly Notes application built with **Node.js** and **Express.js**.  
 It provides a basic REST API to Create, Read, Update, and Delete notes.  
-(There is also a CLI version included in the code, currently commented out.)
+(There is also a CLI version with notes stored in memory included as a seperate file.)
 
 ## Features
 
@@ -46,16 +46,13 @@ Start the server:
 node notes.js
 ```
 
-You should see:
+OR run the CLI program
 
-```
-Server running on http://localhost:3000
+```bash
+node notesCli.js
 ```
 
 The API will be available at `http://localhost:3000`.
-
-> **Note:** The CLI is currently disabled (`// runCli();`).  
-> To use the interactive command-line interface instead, uncomment that line and comment out the `app.listen(...)` section.
 
 ## API Endpoints
 
@@ -121,6 +118,7 @@ curl -X DELETE http://localhost:3000/notes/1
 ├── node_modules/
 ├── .gitignore
 ├── notes.js
+├── notesCli.js
 ├── package.json
 ├── package-lock.json
 └── README.md
